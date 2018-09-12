@@ -4,6 +4,9 @@ import com.example.alex.finalproject.model.userClass;
 
 public class services {
     public boolean validUser(userClass user, String password, String mail){
-        return user!=null&&user.getPassword()==password && user.getMail()==mail;
+
+        if (user!=null&&user.getPassword().equals(password) && user.getMail().equals(mail))
+        return true;
+        else return false;
     }
 }
